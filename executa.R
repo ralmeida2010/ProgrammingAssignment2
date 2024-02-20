@@ -1,21 +1,17 @@
-# Create a cacheable matrix
-myMatrix <- makeCacheMatrix(matrix(c(1, 2, 3, 4), nrow = 2))
 
-# Set the matrix
-myMatrix$set(matrix(c(2, 3, 1,4), nrow = 2))
+myMatrix <- makeCacheMatrix(matrix(c(1,2,3,4,5,6,7,8, 9,10,11,12, 13, 14, 15, 16), nrow = 4, ncol=4)) #inicializa
+myMatrix$set(matrix(c(2,3,1,4,  1,0,5,3,  1,1,3,2,  3,3,2,1), nrow = 4, ncol=4)) #cria a matriz
 
-# Get the matrix
-print(myMatrix$get())  # Output: 
-#      [,1] [,2]
-# [1,]    2    1
-# [2,]    3    4
+print(myMatrix$get()) #imprime a matriz
+print(solve(myMatrix$get())) #imprime o inverso da matriz
 
-# Calculate and set the inverse
-inverseMatrix <- solve(myMatrix$get())
-myMatrix$setInverse(inverseMatrix)
 
-# Get the inverse
-print(myMatrix$getInverse())  # Output:
-#      [,1] [,2]
-# [1,]  0.8 -0.2
-# [2,] -0.6  0.4
+inverseMatrix <- solve(myMatrix$get()) # guarda o inverso da matriz
+myMatrix$setInverse(inverseMatrix) # calcula o inverso 
+print(myMatrix$getInverse())  #imprime o invero da matriz
+
+
+
+
+
+
