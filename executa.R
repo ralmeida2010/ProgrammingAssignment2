@@ -9,6 +9,8 @@ print(solve(myMatrix$get())) #imprime o inverso da matriz
 inverseMatrix <- solve(myMatrix$get()) # guarda o inverso da matriz
 myMatrix$setInverse(inverseMatrix) # calcula o inverso 
 print(myMatrix$getInverse())  #imprime o invero da matriz
+#
+#
 
 
 
